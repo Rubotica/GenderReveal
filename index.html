@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05040a">
+  <title>Sorting Hat Engine 2.12.2</title>
+  <link rel="stylesheet" href="styles.css?v=21220">
+  <script type="importmap">
+  {
+    "imports": {
+      "pixi.js": "https://cdn.jsdelivr.net/npm/pixi.js@8.19.0/dist/pixi.min.mjs"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app" aria-label="The Gender Sorting Ceremony"></div>
+
+  <section id="start-screen" class="start-screen">
+    <div class="start-candles" aria-hidden="true">
+      <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span>
+    </div>
+    <div class="start-card">
+      <div class="crest">✦</div>
+      <h1>The Gender Sorting Ceremony</h1>
+      <p>The magic has been cast…<br>Now the Sorting Hat shall reveal the greatest mystery of all.</p>
+      <button id="start-button" type="button">Begin the Ceremony</button>
+      <p id="status" class="status">Loading the ancient magic…</p>
+    </div>
+  </section>
+
+  <div id="living-vignette" class="living-vignette" aria-hidden="true"></div>
+  <div id="firelight-flash" class="firelight-flash" aria-hidden="true"></div>
+  <div id="orientation-gate" class="orientation-gate" hidden><div><span>↻</span><strong>Draai je telefoon</strong><p>Deze magische ervaring werkt het best in landscape.</p></div></div>
+
+  <div id="subtitle" class="subtitle" aria-live="polite"></div>
+  <div id="prediction" class="prediction" hidden>
+    <div class="prediction-title"><strong>WHAT DO YOU THINK?</strong><span>Choose your prediction</span></div>
+    <div id="choice-confirmation" class="choice-confirmation" hidden><span>You chose:</span><strong></strong></div>
+    <button data-choice="girl"><img src="assets/witch.webp" alt=""><span>A GIRL?</span></button>
+    <button data-choice="boy"><img src="assets/wizard.webp" alt=""><span>A BOY?</span></button>
+  </div>
+
+  <button id="end-ceremony" class="end-ceremony" type="button" hidden>End ceremony</button>
+  <script type="module" src="src/main.js?v=21220"></script>
+</body>
+</html>
